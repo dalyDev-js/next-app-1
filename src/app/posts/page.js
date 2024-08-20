@@ -4,7 +4,7 @@ import React from "react";
 async function Posts() {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
   const data = await response.json();
-  console.log(data);
+
   return (
     <div className="min-h-screen flex items-center justify-center flex-wrap gap-8">
       {data.map((post) => (

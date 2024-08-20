@@ -5,14 +5,14 @@ function Page({ params }) {
   const { id } = params;
   const [data, setData] = useState(null);
   const [count, setCount] = useState(0);
-
+  console.log(params.id, "id");
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
         `https://jsonplaceholder.typicode.com/posts/${id}`
       );
-      const incData = await response.json();
-      setData(incData);
+      const data = await response.json();
+      setData(data);
     };
 
     fetchData();
@@ -24,6 +24,7 @@ function Page({ params }) {
         {data.title}
       </h1>
       <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+        {" "}
         {data.body}
       </p>
       <div className="flex justify-center items-center gap-10">
