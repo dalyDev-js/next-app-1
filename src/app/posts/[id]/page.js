@@ -4,8 +4,12 @@ async function Page({ params }) {
   let post;
   let allPosts = [];
   try {
-    const response = await fetch(`http://localhost:3000/api/posts?id=${id}`);
-    const allPostsResponse = await fetch(`http://localhost:3000/api/posts`);
+    const response = await fetch(
+      `https://main--next-iti.netlify.app/next-app-1/api/posts?id=${id}`
+    );
+    const allPostsResponse = await fetch(
+      `https://main--next-iti.netlify.app/next-app-1/api/posts`
+    );
 
     post = await response.json();
     allPosts = await allPostsResponse.json();

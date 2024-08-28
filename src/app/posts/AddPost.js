@@ -7,13 +7,16 @@ function AddPost({ onPostAdded }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:3000/api/posts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ title, body }),
-    });
+    const response = await fetch(
+      "https://main--next-iti.netlify.app/next-app-1/api/posts",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ title, body }),
+      }
+    );
 
     if (response.ok) {
       const newPost = await response.json();

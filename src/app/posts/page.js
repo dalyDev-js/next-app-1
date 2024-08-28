@@ -7,7 +7,9 @@ function Posts() {
   const [posts, setPosts] = useState([]);
 
   const fetchPosts = async () => {
-    const response = await fetch(`http://localhost:3000/api/posts`);
+    const response = await fetch(
+      `https://main--next-iti.netlify.app/next-app-1/api/posts`
+    );
     const postsData = await response.json();
     setPosts(postsData.reverse());
   };
