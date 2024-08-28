@@ -35,14 +35,14 @@ async function Page({ params }) {
           <div className="flex gap-4">
             {previousPost && (
               <a
-                href={`next-app-1/posts/${previousPost.id}`}
+                href={`/${previousPost.id}`}
                 className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">
                 Previous
               </a>
             )}
             {nextPost && (
               <a
-                href={`next-app-1/posts/${nextPost.id}`}
+                href={`/${nextPost.id}`}
                 className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">
                 Next
               </a>
